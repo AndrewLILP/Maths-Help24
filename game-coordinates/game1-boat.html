@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Cleanup Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #game-container {
+            text-align: center;
+        }
+        #controls {
+            margin-top: 10px;
+        }
+        button {
+            margin: 0 5px;
+        }
+        #stats {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <svg width="400" height="400" viewBox="0 0 10 10">
+            <rect width="10" height="10" fill="#87CEEB" />
+            <circle id="boat" cx="5" cy="5" r="0.3" fill="#8B4513" />
+            <circle id="trash1" cx="2" cy="3" r="0.2" fill="#A9A9A9" />
+            <circle id="trash2" cx="7" cy="7" r="0.2" fill="#A9A9A9" />
+            <circle id="trash3" cx="8" cy="2" r="0.2" fill="#A9A9A9" />
+        </svg>
+        <div id="controls">
+            <button onclick="move('up')">Up</button>
+            <button onclick="move('down')">Down</button>
+            <button onclick="move('left')">Left</button>
+            <button onclick="move('right')">Right</button>
+        </div>
+        <div id="stats">
+            <p>Score: <span id="score">0</span></p>
+            <p>Position: (<span id="position-x">5</span>, <span id="position-y">5</span>)</p>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
